@@ -1,0 +1,26 @@
+--------------INDEX
+a smaller set of dara along with rowid
+--fast access to roes
+
+---------b tree,bit map index, FUNCTION based ,REVERSE key INDEX
+
+--b tree (high cardinality)
+--bit map-which has less distict data col
+
+--function nased --
+---B tree
+		--ordered listof valuies divided into ranages in each index SEGMENT
+		
+--
+NON UNIQUE INDEX --WILL DO RANGE SCAN--RANGE SCAN_INSTANCES CHEMA--NON  UNIQUE SCAN AND ITS CHECK INDEX SEGMENT
+UNIQUE INDEX -UNIQUE SCAN--
+
+INDEX FULL SCAN--INDEX ON SAL COLUMN--NO NEED OF OPTIMIZER TO GO TO TABLE FOR ANY AGGREGATION-COMPUTING THE SUM FROMINDEX SEGMENT
+--INDEX DATA WILL BE SMALLLER--NO TABLE ACCESS
+
+-INDEX FULL SCAN (MIN/MAX)--SELECT MAX (SAL) FROM EMP;
+
+INDEX FAST FULL SCAN-- 	SELECT empno,sal from emp; --2 diff.INDEX on 2 coln
+
+
+--------REVERSE KEY INDEX--INDEX BLOCK CONTENTION
